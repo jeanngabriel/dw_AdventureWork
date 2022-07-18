@@ -1,0 +1,165 @@
+version: 2
+
+sources:
+  - name: adventureworks_EL
+    schema: adventureworks_EL
+    description: This is the adventureworks erp postgres database replica
+
+    tables:
+
+######
+      - name: sales_salesorderheader
+        description: One record per order. Includes cancelled and deleted orders.
+
+        columns:
+          - name: salesorderid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+
+######
+      - name: person_address
+
+        columns:
+          - name: addressid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+
+
+######
+      - name: person_countryregion
+
+        columns:
+          - name: countryregioncode
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+######
+      - name: person_person
+
+        columns:
+          - name: businessentityid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+######  
+      - name: person_stateprovince
+
+        columns:
+          - name: stateprovinceid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+
+
+######
+      - name: production_product
+
+        columns:
+          - name: productid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+######
+      - name: sales_customer
+      
+        columns:
+          - name: customerid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+        
+######
+      - name: sales_salesorderdetail
+
+        columns:
+          - name: salesorderid
+          - name: salesorderdetailid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+######
+      - name: sales_salesorderheadersalesreason
+
+        columns:
+          - name: salesorderid
+            description: Primary key of the orders table
+
+
+######
+      - name: sales_salesreason
+
+        columns:
+          - name: salesreasonid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+
+######
+      - name: sales_salesterritory
+        columns:
+          - name: territoryid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+#####
+      - name: sales_creditcard
+        columns:
+          - name: creditcardid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time
+
+#####
+      - name: sales_salesperson
+        columns:
+          - name: businessentityid
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
+          - name: status
+            description: Note that the status can change over time

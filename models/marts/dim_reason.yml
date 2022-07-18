@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_reason
+    columns:
+      - name: order_id
+        description: The primary key of the order
+
+      - name: reason_sk
+        description: The foreign key to the employees dimension table
